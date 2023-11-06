@@ -5,7 +5,6 @@ module.exports = {
     node: true
   },
   extends: [
-    'next/core-web-vitals',
     'eslint:recommended',
     'plugin:import/errors',
     'plugin:import/warnings',
@@ -33,6 +32,7 @@ module.exports = {
     '@typescript-eslint/no-var-requires': 0,
     'max-len': [ 'error', { 'code': 120 } ],
     'no-useless-catch': 0,
+    'no-async-promise-executor': 'off',
     '@typescript-eslint/no-empty-interface': [
       'error', {
         'allowSingleExtends': true
@@ -40,13 +40,14 @@ module.exports = {
     // ////////////////
     // custom rules //
     // ////////////////
-    'indent': [ 'error', 2, { 'SwitchCase': 1 } ],
+    'indent': 'off',
     '@typescript-eslint/no-unused-vars': [
       'error', {
         'argsIgnorePattern': '^_',
         'varsIgnorePattern': '^_',
         'caughtErrorsIgnorePattern': '^_'
       } ],
+    '@typescript-eslint/no-namespace': [ 'error', { 'allowDeclarations': true } ],
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     'new-cap': [ 'error', { 'newIsCap': true, 'capIsNew': false } ],
@@ -59,7 +60,6 @@ module.exports = {
     // disable trailing comma
     'comma-dangle': [ 'error', 'never' ],
     // disable semicolon in end
-    'semi': [ 'error', 'never' ],
-    'prefer-promise-reject-errors': [ 'error', { 'allowEmptyReject': true } ]
+    'semi': [ 'error', 'never' ]
   }
 }

@@ -7,8 +7,15 @@
 export async function importEsmModule<T>(
   name: string
 ): Promise<T> {
-  const module = eval(
-    `(async () => {return await import("${ name }")})()`
-  )
-  return module as T
+  try {
+    const module = eval(
+      `(async () => {return await import("${ name }")})()`
+    )
+    return module as T
+  } catch ( error ) {
+    const msg = `Could not load/find "${ name }" ESM Module, make${ ' '
+    }sure the module is installed and it's name is spelled correctly`
+    console.error( msg, error )
+    throw Error( msg )
+  }
 }
