@@ -1,7 +1,7 @@
 {
   "name": "commonjs-esm-loader",
   "description": "Loads ESM modules on CommonJS projects",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Luiz Carlos Ferreira",
   "license": "MIT",
   "main": "build/index.js",
@@ -18,13 +18,10 @@
   },
   "homepage": "https://github.com/nonam4/commonjs-esm-loader",
   "scripts": {
-    "lint": "eslint --quiet --fix --ext .js,.ts,.tsx,.jsx .",
+    "lint": "eslint --quiet --fix --ext .js,.ts .",
     "dev": "concurrently \"tsc -w\" \"tsc-alias -w\"",
     "build": "tsc && tsc-alias",
-    "release": "standard-version"
-  },
-  "dependencies": {
-    "standard-version": "^9.5.0"
+    "release": "yarn lint && yarn build && standard-version"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.9.1",
@@ -34,7 +31,8 @@
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-import": "^2.29.0",
     "tsc-alias": "^1.8.6",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "standard-version": "^9.5.0"
   },
   "keywords": [
     "commonjs",
