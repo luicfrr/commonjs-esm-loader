@@ -28,7 +28,7 @@ async function loadPdf() {
   new PdfReader( ... )
 }
 ```
-If you're using Typescript, it's important to import add `import type PackageType from 'mypackage'` so that intellisense will continue to work. 
+If you're using Typescript, it's important to add `import type PackageType from 'mypackage'` so that intellisense will continue to work. 
 
 ## 👷 Built With
 
