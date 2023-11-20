@@ -1,7 +1,7 @@
 {
   "name": "commonjs-esm-loader",
   "description": "Loads ESM modules on CommonJS projects",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Luiz Carlos Ferreira",
   "license": "MIT",
   "main": "build/index.js",
