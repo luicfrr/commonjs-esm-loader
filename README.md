@@ -16,19 +16,31 @@ yarn add commonjs-esm-loader
 
 ## 💡 Usage
 
-OBS: I'll use [`pdfreader`](https://www.npmjs.com/package/pdfreader) package as example as this was the package that makes me create this project, but it works with any ESM package you want to load.
+OBS: Using [`pdfreader`](https://www.npmjs.com/package/pdfreader) package as example because it was the package that makes me create this project, but it works with any ESM package you want to load.
 
-```sh
+#### JavaScript
+```javascript
 import { importEsmModule } from 'commonjs-esm-loader'
-import type PdfReaderType from 'pdfreader'
 
-async function loadPdf() {
-  const { PdfReader } = await importEsmModule<typeof PdfReaderType>( 'pdfreader' )
-  # your package is loaded, typed and ready to use :)
+async function myFunction() {
+  const { PdfReader } = await importEsmModule( 'pdfreader' )
+  // your package is loaded and ready to use :)
   new PdfReader( ... )
 }
 ```
-If you're using Typescript, it's important to add `import type PackageType from 'mypackage'` so that intellisense will continue to work. 
+
+#### TypeScript
+```javascript
+import { importEsmModule } from 'commonjs-esm-loader'
+// load package type so intellisense can work
+import type PdfReaderType from 'pdfreader'
+
+async function myFunction() {
+  const { PdfReader } = await importEsmModule<typeof PdfReaderType>( 'pdfreader' )
+  // your package is loaded, typed and ready to use :)
+  new PdfReader( ... )
+}
+```
 
 ## 👷 Built With
 
