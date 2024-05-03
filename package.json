@@ -11,12 +11,12 @@
   "types": "build/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nonam4/commonjs-esm-loader.git"
+    "url": "git+https://github.com/luicfrr/commonjs-esm-loader.git"
   },
   "bugs": {
-    "url": "https://github.com/nonam4/commonjs-esm-loader/issues"
+    "url": "https://github.com/luicfrr/commonjs-esm-loader/issues"
   },
-  "homepage": "https://github.com/nonam4/commonjs-esm-loader",
+  "homepage": "https://github.com/luicfrr/commonjs-esm-loader",
   "scripts": {
     "lint": "eslint --quiet --fix --ext .js,.ts .",
     "dev": "concurrently \"tsc -w\" \"tsc-alias -w\"",
