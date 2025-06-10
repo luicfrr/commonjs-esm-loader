@@ -4,7 +4,11 @@ Trying to load a fresh installed package and got the error `cannot use import st
 
 I've created it after Googling a lot trying to find a sollution on how to import an ESM package in a big and consolidated CommonJS project... Migrate whole project to ESM architecture just to use a single package was not an option.
 
-Is this package usefull to you? Support it [buying me a coffee ☕](https://coff.ee/luicfrr) or giving a ⭐ on [GitHub](https://github.com/luicfrr/commonjs-esm-loader).
+Is this package usefull to you?
+
+<a href="https://www.buymeacoffee.com/luicfrr" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
+Or give it a ⭐ on [GitHub](https://github.com/luicfrr/commonjs-esm-loader).
 
 ## 🧰 Installation
 
